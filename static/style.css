@@ -1,0 +1,64 @@
+/* Additional custom styles can be added here */
+.status-indicator {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.status-indicator.online {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+}
+
+.status-indicator.offline {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+}
+
+.status-indicator.loading {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+/* Enhanced message formatting */
+.message-content strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.message-content em {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
